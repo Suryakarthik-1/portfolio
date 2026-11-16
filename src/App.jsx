@@ -4,7 +4,7 @@ import {
   FiArrowUpRight, FiCode, FiCheck,
 } from "react-icons/fi";
 import {
-  person, navItems, stack, about, projects, process,
+  person, navItems, stack, about, experience, projects, process,
 } from "./data.js";
 import LogoStrip from "./Logos.jsx";
 import ContactForm from "./ContactForm.jsx";
@@ -77,31 +77,33 @@ function About() {
         ))}
       </div>
 
-      <div className="two-col">
-        <div>
-          <h3>Experience</h3>
-          <ul className="timeline">
-            {about.experience.map((e) => (
-              <li key={e.role}>
-                <div className="timeline-head">
-                  <strong>{e.role}</strong>
-                  <span>{e.when}</span>
-                </div>
-                <div className="timeline-org">{e.org}</div>
-                <p>{e.detail}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h3>Recognition</h3>
-          <ul className="check-list">
-            {about.achievements.map((a) => (
-              <li key={a}><FiCheck aria-hidden="true" /><span>{a}</span></li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      <h3 className="sub-heading">Recognition</h3>
+      <ul className="check-list recognition-list">
+        {about.achievements.map((a) => (
+          <li key={a}><FiCheck aria-hidden="true" /><span>{a}</span></li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function Experience() {
+  return (
+    <section className="section section-tint" id="experience">
+      <span className="eyebrow">Experience</span>
+      <h2>Where I've <em>worked.</em></h2>
+      <ol className="timeline timeline-wide">
+        {experience.map((e) => (
+          <li key={e.role + e.org}>
+            <div className="timeline-head">
+              <strong>{e.role}</strong>
+              <span>{e.when}</span>
+            </div>
+            <div className="timeline-org">{e.org}</div>
+            <p>{e.detail}</p>
+          </li>
+        ))}
+      </ol>
     </section>
   );
 }
@@ -255,6 +257,7 @@ export default function App() {
         <Hero />
         <LogoStrip items={stack} />
         <About />
+        <Experience />
         <Projects />
         <Process />
         <Contact />

@@ -15,6 +15,7 @@ export const person = {
 export const navItems = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Process", href: "#process" },
   { label: "Contact", href: "#contact" },
@@ -35,25 +36,28 @@ export const about = {
     { value: "87", label: "Automated tests in one project" },
     { value: "2027", label: "Graduating, open to internships" },
   ],
-  experience: [
-    {
-      role: "Full Stack Web Developer Intern",
-      org: "Fabits",
-      when: "Jan 2024 – May 2024",
-      detail: "Built features across a React, Node.js and MongoDB app. Cut API response latency by 30%.",
-    },
-    {
-      role: "Freelance Frontend Developer",
-      org: "CryptoDigvijay",
-      when: "2025",
-      detail: "Built a multi-page company website for a YouTube creator with React, Vite and Framer Motion.",
-    },
-  ],
   achievements: [
     "Co-inventor on an Indian patent application (published Jan 2026): an adaptive therapeutic system for chronic venous insufficiency.",
     "Harvard CS50x: Introduction to Computer Science (edX).",
   ],
 };
+
+export const experience = [
+  {
+    role: "Freelance Frontend Developer",
+    org: "CryptoDigvijay (client: YouTube creator)",
+    when: "2025",
+    detail:
+      "Built a multi-page company website with About, Blog, Team, Contact and Testimonials pages, using React and Vite. Added page transitions with Framer Motion and carousels with Swiper.js.",
+  },
+  {
+    role: "Full Stack Web Developer Intern",
+    org: "Fabits",
+    when: "Jan 2024 – May 2024",
+    detail:
+      "Built features across a React, Node.js and MongoDB app. Cut API response latency by 30%.",
+  },
+];
 
 export const projects = [
   {
@@ -207,6 +211,26 @@ export const projects = [
     ],
     outcome:
       "A single-file desktop app that runs from Eclipse or the command line. Built for CS 602 (Java GUI assignment).",
+  },
+  {
+    id: "cryptodigvijay",
+    title: "CryptoDigvijay",
+    tagline: "Corporate website for a YouTube creator",
+    summary:
+      "A multi-page company site with animated sections, a team page and a testimonials carousel.",
+    stack: ["React", "Vite", "React Router", "Framer Motion", "Swiper.js", "Bootstrap"],
+    repo: "https://github.com/Suryakarthik-1/CryptoDIgvijay",
+    demo: "",
+    problem:
+      "A YouTube creator needed a professional website to present their channel, team and testimonials, with a clear contact page for enquiries.",
+    built: [
+      "Multi-page site with About, Blog, Team, Contact and Testimonials pages.",
+      "Smooth page navigation with React Router DOM, and animations with Framer Motion.",
+      "A Swiper.js carousel for testimonials.",
+      "Styled with Bootstrap and custom CSS, and built for production with optimised Vite bundling.",
+    ],
+    outcome:
+      "Delivered as a freelance project. The site is built on a React template and customised for the client.",
   },
 ];
 
