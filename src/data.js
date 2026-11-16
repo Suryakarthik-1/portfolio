@@ -30,7 +30,7 @@ export const about = {
   intro:
     "I'm a B.E. Computer Science (Artificial Intelligence) student at Dayananda Sagar Academy of Technology and Management, Bengaluru, graduating July 2027. I build full-stack web apps and applied machine-learning systems, and I like taking an idea from a prototype to something people can use.",
   facts: [
-    { value: "4", label: "Shipped projects on GitHub" },
+    { value: "30+", label: "Public repositories on GitHub" },
     { value: "0.94", label: "Validation AUC on DocForensics' CNN" },
     { value: "87", label: "Automated tests in one project" },
     { value: "2027", label: "Graduating, open to internships" },
@@ -128,6 +128,85 @@ export const projects = [
       "A sanitiser that pauses recording when it sees secret-like text, plus a Unix-socket IPC between the daemon and the UI.",
     ],
     outcome: "Runs as a systemd user service. Works on X11 and Wayland.",
+  },
+  {
+    id: "grovers",
+    title: "Grover's Search in Qiskit",
+    tagline: "Quantum search and quantum parallelism",
+    summary:
+      "Grover's algorithm implemented with Qiskit, with an analysis of how superposition and amplitude amplification find a marked item.",
+    stack: ["Python", "Qiskit", "Matplotlib"],
+    repo: "https://github.com/Suryakarthik-1/Grover-s-Algorithm-implemented-in-Python-using-Qiskit",
+    demo: "",
+    problem:
+      "Searching an unsorted list of N items takes about N checks on a classical computer. Grover's algorithm needs roughly √N quantum steps, but the reason it works is easy to get wrong.",
+    built: [
+      "A minimal Grover implementation in Qiskit: an oracle that marks the target, then the diffusion operator (inversion about the mean).",
+      "A separate analysis script that visualises superposition and how the amplitude of the target grows with each iteration.",
+      "A comprehensive analyser for quantum parallelism, showing where the speed-up comes from and where it stops.",
+      "A written walkthrough covering the oracle, phase kickback, the 2D rotation picture, and why running too many iterations hurts accuracy.",
+    ],
+    outcome:
+      "Three runnable scripts and a plot. Written for a course on cryptography and quantum computing. Covers the implications for AES and hash functions.",
+  },
+  {
+    id: "urbannexus",
+    title: "Urban Nexus",
+    tagline: "AI-powered smart city dashboard",
+    summary:
+      "An admin dashboard and citizen portal for city sensors, alerts, reports and policy simulations.",
+    stack: ["TypeScript", "React", "Express", "Tailwind CSS", "React Query"],
+    repo: "https://github.com/Suryakarthik-1/SmartCityIntegrated",
+    demo: "",
+    problem:
+      "City teams deal with air quality, waste, water and traffic across many sensors, but the data sits in separate places, and citizens have no simple way to report problems.",
+    built: [
+      "An admin dashboard for live sensor readings, district data, time-series charts and an alert queue that can be resolved or deleted.",
+      "A citizen portal for submitting reports and seeing their own stats.",
+      "REST endpoints for sensors, alerts, route optimisation, predictions, policy simulation and search.",
+      "Storage sits behind an interface, so the in-memory demo backend can be swapped for a real database.",
+    ],
+    outcome:
+      "A working full-stack prototype with a schema shared between client and server. Storage is in-memory, so data resets on restart.",
+  },
+  {
+    id: "taskboard",
+    title: "TaskBoard",
+    tagline: "Java web task manager",
+    summary:
+      "A task manager built with Java servlets, JSP, Hibernate and Spring, running on Tomcat with an in-memory H2 database.",
+    stack: ["Java", "Servlets", "JSP", "Hibernate", "Spring", "H2", "Tomcat"],
+    repo: "https://github.com/Suryakarthik-1/TaskBoard",
+    demo: "",
+    problem:
+      "A web app needs a way to remember users between requests, store data, and keep the business logic apart from the page layer. This project shows how those pieces fit together in Java.",
+    built: [
+      "Add, mark as done, and delete tasks from a single page.",
+      "Saves the user's display name in a cookie for 30 days, and counts visits in the HTTP session.",
+      "Hibernate maps the Task class to a database table, and Spring injects the data-access object.",
+      "Handles GET, POST, PUT, TRACE and OPTIONS requests in one servlet.",
+    ],
+    outcome:
+      "A complete app that runs on Tomcat with no database install. Built for CS602 (Full Stack Web Development with Java).",
+  },
+  {
+    id: "financetracker",
+    title: "Finance Tracker",
+    tagline: "Desktop income and expense tracker",
+    summary:
+      "A Java Swing app for tracking income and expenses, with a live balance that turns green or red.",
+    stack: ["Java", "Swing", "AWT"],
+    repo: "https://github.com/Suryakarthik-1/Finance-Tracker",
+    demo: "",
+    problem:
+      "Keeping track of income and expenses in a spreadsheet is slow, and it's easy to enter a bad amount without noticing.",
+    built: [
+      "Add income and expense transactions, shown in a table.",
+      "A live balance that updates on every change and is green when positive, red when negative.",
+      "Input validation with error messages, and a clear-all action that asks for confirmation first.",
+    ],
+    outcome:
+      "A single-file desktop app that runs from Eclipse or the command line. Built for CS 602 (Java GUI assignment).",
   },
 ];
 
