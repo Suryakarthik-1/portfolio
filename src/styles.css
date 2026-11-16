@@ -173,7 +173,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
   margin-top: 22px;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(44px, 7vw, 84px);
+  font-size: clamp(38px, 5.4vw, 64px);
   line-height: 1.02;
   color: var(--white);
   text-shadow: 0 2px 30px rgba(0, 80, 140, 0.15);
@@ -193,7 +193,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
   position: relative;
   z-index: 1;
   width: min(480px, 88vw);
-  margin: -210px auto 0;
+  margin: -230px auto 0;
   pointer-events: none;
 }
 .hero-photo {
